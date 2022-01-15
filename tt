@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+class Myclass {
+public:
+	static int foo()
+	{
+		return 1;
+	}
+	static int mx;
+};
+int foo()
+{
+	return 2;
+}
+int Myclass::mx = foo();
+int main()
+{
+	std::cout << Myclass::mx << "\n";
+}
